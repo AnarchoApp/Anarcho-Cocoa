@@ -2,11 +2,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
 
+use_frameworks!
+
 inhibit_all_warnings!
 
-   pod 'AFNetworking'
-   pod 'libextobjc/EXTScope'
-   pod 'KVOController', '~> 1.0.1'
+    pod 'Alamofire', '~> 1.2'
+pod 'JsonSwiftson'
 
 post_install do |installer|
   installer.project.targets.each do |target|
