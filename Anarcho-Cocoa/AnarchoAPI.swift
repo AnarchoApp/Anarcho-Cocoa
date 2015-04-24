@@ -2,7 +2,7 @@ import UIKit
 import Alamofire
 import JsonSwiftson
 
-struct Application {
+public struct Application {
     let app_key : NSString
     let app_type : NSString
     let icon_url : NSString
@@ -10,9 +10,10 @@ struct Application {
     let name : NSString
 }
 
-class AnarchoAPI: NSObject {
-   
-    func autorizaetion() {
+public typealias completion = () -> Void
+
+public class AnarchoAPI{
+    public func autorizaetion(completionBlock: completion? = nil) -> Self{
         Alamofire.request(.POST, "http://anarcho.pp.ciklum.com/api/login",
             parameters: ["email" : "dsay@ciklum.com", "password" : "8hYDrdiv"],  encoding: .JSON)
             .validate(statusCode: 200..<200)
@@ -21,11 +22,14 @@ class AnarchoAPI: NSObject {
                 var mapper = JsonSwiftson(json: string!)
                 let token : NSString = mapper["authToken"].map()!
                 Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = ["x-auth-token" :token]
-                self.getApps()
+                if let block = completionBlock {
+                    block()
+                }
         }
+        return self
     }
     
-    func getApps() {
+    public func getApps(completion: (applications: [Application]) -> Void) -> Self{
         Alamofire.request(.GET, "http://anarcho.pp.ciklum.com/api/apps")
             .validate(statusCode: 200..<200)
             .validate(contentType: ["application/json"])
@@ -38,8 +42,13 @@ class AnarchoAPI: NSObject {
                         icon_url: j["icon_url"].map()!,
                         package: j["package"].map()!,
                         name: j["name"].map()!)
-                    }!
-                println(applications)
+                    } ?? []
+                completion(applications: applications)
         }
+        return self
     }
+    
+//    public func then(fungg: () -> Self) -> Self {
+//        return self
+//    }
 }
