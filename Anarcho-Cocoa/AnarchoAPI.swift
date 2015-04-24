@@ -13,9 +13,9 @@ public struct Application {
 public typealias completion = () -> Void
 
 public class AnarchoAPI{
-    public func autorizaetion(completionBlock: completion? = nil) -> Self{
+    public func autorizaetion(email: NSString!, password: NSString!, completionBlock: completion? = nil) -> Self{
         Alamofire.request(.POST, "http://anarcho.pp.ciklum.com/api/login",
-            parameters: ["email" : "dsay@ciklum.com", "password" : "8hYDrdiv"],  encoding: .JSON)
+            parameters: ["email" : email, "password" : password],  encoding: .JSON)
             .validate(statusCode: 200..<200)
             .validate(contentType: ["application/json"])
             .responseString(encoding: NSUTF8StringEncoding) { (_, _, string, _) -> Void in

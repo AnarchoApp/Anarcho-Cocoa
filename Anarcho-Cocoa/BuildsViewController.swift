@@ -4,11 +4,11 @@ class BuildsViewController: UITableViewController, UITableViewDataSource, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        AnarchoAPI()
-            .autorizaetion { () -> Void in
+        
+        AnarchoAPI().autorizaetion("", password: "") { () -> Void in
             AnarchoAPI().getApps { (applications) -> Void in
                 println(applications)
-                }
+            }
         }
     }
     
