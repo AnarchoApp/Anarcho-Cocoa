@@ -5,20 +5,19 @@ class BuildsViewController: UITableViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 60
         title = "Applications"
-        AnarchoAPI().autorizaetion("dsay@ciklum.com", password: "8hYDrdiv") { () -> Void in
+        AnarchoAPI().authorization("", password: "") { () -> Void in
             AnarchoAPI().getApps { (app) -> Void in
                 self.applications = app
                 self.tableView.reloadData()
             }
-            AnarchoAPI().getBuilds("0ec78bb8-c977-11e4-afd3-62dd4457b65e", completion: { (builds) -> Void in
+            AnarchoAPI().getBuilds("", completion: { (builds) -> Void in
                 println(builds)
             })
         }
     }
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
-    }
+
    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.applications.count
     }
@@ -27,11 +26,6 @@ class BuildsViewController: UITableViewController, UITableViewDataSource, UITabl
         return 1
     }
     
-//   override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let app = self.applications[section]
-//        return app.app_type as String
-//    }
-//    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         

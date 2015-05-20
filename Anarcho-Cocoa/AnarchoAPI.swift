@@ -20,11 +20,14 @@ public struct Build {
 
 public typealias completion = () -> Void
 
+public let kAuthorization = "http://anarcho.pp.ciklum.com/api/login"
+public let kApps = "http://anarcho.pp.ciklum.com/api/apps/"
+
 public class AnarchoAPI{
-    public func autorizaetion(email: NSString!, password: NSString!, completionBlock: completion? = nil) -> Self{
-        Alamofire.request(.POST, "http://anarcho.pp.ciklum.com/api/login",
+    public func authorization(email: NSString!, password: NSString!, completionBlock: completion? = nil) -> Self{
+        Alamofire.request(.POST, kAuthorization,
             parameters: ["email" : email, "password" : password],  encoding: .JSON)
-            .validate(statusCode: 200..<200)
+            .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseString(encoding: NSUTF8StringEncoding) { (_, _, string, _) -> Void in
                 if let json = string{
@@ -40,8 +43,8 @@ public class AnarchoAPI{
     }
     
     public func getApps(completion: (applications: [Application]) -> Void) -> Self{
-        Alamofire.request(.GET, "http://anarcho.pp.ciklum.com/api/apps")
-            .validate(statusCode: 200..<200)
+        Alamofire.request(.GET, kApps)
+            .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseString(encoding: NSUTF8StringEncoding) { (_, _, string, _) -> Void in
                 if let json = string{
@@ -63,8 +66,8 @@ public class AnarchoAPI{
     }
     
     public func getBuilds(appKey: NSString, completion: (builds: [Build]) -> Void) -> Self{
-        Alamofire.request(.GET, ("http://anarcho.pp.ciklum.com/api/apps/\(appKey)/builds"))
-            .validate(statusCode: 200..<200)
+        Alamofire.request(.GET, "\(kApps)\(appKey)/builds")
+            .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseString(encoding: NSUTF8StringEncoding) { (_, _, string, _) -> Void in
                 if let json = string{
@@ -123,10 +126,8 @@ class ImageLoader {
                     })
                     return
                 }
-                
             })
             downloadTask.resume()
         })
-        
     }
 }
