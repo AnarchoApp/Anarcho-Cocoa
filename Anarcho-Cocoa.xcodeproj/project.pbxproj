@@ -15,6 +15,7 @@
 		32C300C91AD7D763000D4E51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C300C71AD7D763000D4E51 /* LaunchScreen.xib */; };
 		32C300D51AD7D763000D4E51 /* Anarcho_CocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C300D41AD7D763000D4E51 /* Anarcho_CocoaTests.swift */; };
 		32DAAB661AEA27A100267BB9 /* AnarchoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DAAB651AEA27A100267BB9 /* AnarchoAPI.swift */; };
+		32DAAB6A1AFB54BF00267BB9 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DAAB691AFB54BF00267BB9 /* HamburgerButton.swift */; };
 		DA051562C7985A35D240A0C4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760C081D9EAEBE76193CA396 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		32C300D31AD7D763000D4E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C300D41AD7D763000D4E51 /* Anarcho_CocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anarcho_CocoaTests.swift; sourceTree = "<group>"; };
 		32DAAB651AEA27A100267BB9 /* AnarchoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnarchoAPI.swift; sourceTree = "<group>"; };
+		32DAAB691AFB54BF00267BB9 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		760C081D9EAEBE76193CA396 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8191AEFFDA3B934A8E321F4E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C0EDB1299327FA25CFB9D633 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				327722121AE63E7700E607BF /* BuildDetailsViewController.swift */,
 				32C300C21AD7D763000D4E51 /* Main.storyboard */,
 				32DAAB651AEA27A100267BB9 /* AnarchoAPI.swift */,
+				32DAAB691AFB54BF00267BB9 /* HamburgerButton.swift */,
 				32C300C51AD7D763000D4E51 /* Images.xcassets */,
 				32C300C71AD7D763000D4E51 /* LaunchScreen.xib */,
 				32C300BC1AD7D763000D4E51 /* Supporting Files */,
@@ -296,6 +299,7 @@
 				327722131AE63E7700E607BF /* BuildDetailsViewController.swift in Sources */,
 				32DAAB661AEA27A100267BB9 /* AnarchoAPI.swift in Sources */,
 				32C300BF1AD7D763000D4E51 /* AppDelegate.swift in Sources */,
+				32DAAB6A1AFB54BF00267BB9 /* HamburgerButton.swift in Sources */,
 				327722111AE63E6300E607BF /* BuildsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
