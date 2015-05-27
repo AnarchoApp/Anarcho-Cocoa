@@ -55,13 +55,8 @@ class LoginViewController: UIViewController {
             AnarchoAPI().authorization(login, password: pass) { () -> Void in
                 AnarchoAPI().getApps { (app) -> Void in
                     self.applications = app
-                    
-                    AnarchoAPI().getBuilds("", completion: { (builds) -> Void in
-                        println(builds)
-                        self.performSegueWithIdentifier("showBuilds", sender: self)
-                        self.loginButton.enabled = true
-                    })
-                    
+                    self.performSegueWithIdentifier("showBuilds", sender: self)
+                    self.loginButton.enabled = true
                 }
                 
             }
