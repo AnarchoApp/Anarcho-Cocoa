@@ -7,15 +7,6 @@ class BuildsViewController: UITableViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         self.tableView.rowHeight = 60
         title = "Applications"
-        AnarchoAPI().authorization("", password: "") { () -> Void in
-            AnarchoAPI().getApps { (app) -> Void in
-                self.applications = app
-                self.tableView.reloadData()
-            }
-            AnarchoAPI().getBuilds("", completion: { (builds) -> Void in
-                println(builds)
-            })
-        }
     }
 
    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

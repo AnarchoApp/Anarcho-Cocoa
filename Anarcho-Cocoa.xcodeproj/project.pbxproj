@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		327722111AE63E6300E607BF /* BuildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327722101AE63E6300E607BF /* BuildsViewController.swift */; };
-		327722131AE63E7700E607BF /* BuildDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327722121AE63E7700E607BF /* BuildDetailsViewController.swift */; };
+		245813BD1B15B243002861D9 /* AnarchoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245813BC1B15B243002861D9 /* AnarchoAPI.swift */; };
+		245813C21B15B255002861D9 /* BuildDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245813BF1B15B255002861D9 /* BuildDetailsViewController.swift */; };
+		245813C31B15B255002861D9 /* BuildsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245813C01B15B255002861D9 /* BuildsViewController.swift */; };
+		245813C41B15B255002861D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245813C11B15B255002861D9 /* LoginViewController.swift */; };
+		245813C71B15B281002861D9 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245813C61B15B280002861D9 /* HamburgerButton.swift */; };
 		32C300BF1AD7D763000D4E51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C300BE1AD7D763000D4E51 /* AppDelegate.swift */; };
 		32C300C41AD7D763000D4E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C300C21AD7D763000D4E51 /* Main.storyboard */; };
 		32C300C61AD7D763000D4E51 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C300C51AD7D763000D4E51 /* Images.xcassets */; };
 		32C300C91AD7D763000D4E51 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C300C71AD7D763000D4E51 /* LaunchScreen.xib */; };
 		32C300D51AD7D763000D4E51 /* Anarcho_CocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C300D41AD7D763000D4E51 /* Anarcho_CocoaTests.swift */; };
-		32DAAB661AEA27A100267BB9 /* AnarchoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DAAB651AEA27A100267BB9 /* AnarchoAPI.swift */; };
-		32DAAB6A1AFB54BF00267BB9 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DAAB691AFB54BF00267BB9 /* HamburgerButton.swift */; };
 		DA051562C7985A35D240A0C4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760C081D9EAEBE76193CA396 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -30,8 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		327722101AE63E6300E607BF /* BuildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildsViewController.swift; sourceTree = "<group>"; };
-		327722121AE63E7700E607BF /* BuildDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDetailsViewController.swift; sourceTree = "<group>"; };
+		245813BC1B15B243002861D9 /* AnarchoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnarchoAPI.swift; sourceTree = "<group>"; };
+		245813BF1B15B255002861D9 /* BuildDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildDetailsViewController.swift; sourceTree = "<group>"; };
+		245813C01B15B255002861D9 /* BuildsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildsViewController.swift; sourceTree = "<group>"; };
+		245813C11B15B255002861D9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		245813C61B15B280002861D9 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		32C300B91AD7D763000D4E51 /* Anarcho-Cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anarcho-Cocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C300BD1AD7D763000D4E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C300BE1AD7D763000D4E51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +45,6 @@
 		32C300CE1AD7D763000D4E51 /* Anarcho-CocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Anarcho-CocoaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C300D31AD7D763000D4E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C300D41AD7D763000D4E51 /* Anarcho_CocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anarcho_CocoaTests.swift; sourceTree = "<group>"; };
-		32DAAB651AEA27A100267BB9 /* AnarchoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnarchoAPI.swift; sourceTree = "<group>"; };
-		32DAAB691AFB54BF00267BB9 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		760C081D9EAEBE76193CA396 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8191AEFFDA3B934A8E321F4E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C0EDB1299327FA25CFB9D633 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245813B71B15B024002861D9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				245813C51B15B280002861D9 /* Common */,
+				245813BE1B15B255002861D9 /* Presentation */,
+				245813BB1B15B243002861D9 /* Network */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		245813BB1B15B243002861D9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				245813BC1B15B243002861D9 /* AnarchoAPI.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		245813BE1B15B255002861D9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				245813BF1B15B255002861D9 /* BuildDetailsViewController.swift */,
+				245813C01B15B255002861D9 /* BuildsViewController.swift */,
+				245813C11B15B255002861D9 /* LoginViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		245813C51B15B280002861D9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				245813C61B15B280002861D9 /* HamburgerButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		32C300B01AD7D762000D4E51 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				32C300BE1AD7D763000D4E51 /* AppDelegate.swift */,
-				327722101AE63E6300E607BF /* BuildsViewController.swift */,
-				327722121AE63E7700E607BF /* BuildDetailsViewController.swift */,
+				245813B71B15B024002861D9 /* Source */,
 				32C300C21AD7D763000D4E51 /* Main.storyboard */,
-				32DAAB651AEA27A100267BB9 /* AnarchoAPI.swift */,
-				32DAAB691AFB54BF00267BB9 /* HamburgerButton.swift */,
 				32C300C51AD7D763000D4E51 /* Images.xcassets */,
 				32C300C71AD7D763000D4E51 /* LaunchScreen.xib */,
 				32C300BC1AD7D763000D4E51 /* Supporting Files */,
@@ -296,11 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327722131AE63E7700E607BF /* BuildDetailsViewController.swift in Sources */,
-				32DAAB661AEA27A100267BB9 /* AnarchoAPI.swift in Sources */,
+				245813C41B15B255002861D9 /* LoginViewController.swift in Sources */,
+				245813C21B15B255002861D9 /* BuildDetailsViewController.swift in Sources */,
+				245813BD1B15B243002861D9 /* AnarchoAPI.swift in Sources */,
 				32C300BF1AD7D763000D4E51 /* AppDelegate.swift in Sources */,
-				32DAAB6A1AFB54BF00267BB9 /* HamburgerButton.swift in Sources */,
-				327722111AE63E6300E607BF /* BuildsViewController.swift in Sources */,
+				245813C31B15B255002861D9 /* BuildsViewController.swift in Sources */,
+				245813C71B15B281002861D9 /* HamburgerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
