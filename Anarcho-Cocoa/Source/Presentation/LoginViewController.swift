@@ -45,6 +45,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
             let buildsViewController = segue.destinationViewController as? BuildsViewController
             if let viewController = buildsViewController {
                 viewController.applications = self.applications
+                viewController.userLogin = self.loginTextField.text
             }
         }
 

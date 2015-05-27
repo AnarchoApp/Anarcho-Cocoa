@@ -2,13 +2,14 @@ import UIKit
 import CoreData
 class BuildsViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     var applications : [Application] = []
+    var userLogin : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 60
         title = "Applications"
         self.setUpLogOutButton()
-        AnarchoAPI().getBuilds("Mak_Sim", completion: { (builds) -> Void in
+        AnarchoAPI().getBuilds(self.userLogin, completion: { (builds) -> Void in
             println(builds)
         })
 
