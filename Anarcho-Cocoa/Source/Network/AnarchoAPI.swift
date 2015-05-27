@@ -21,7 +21,7 @@ public struct Build {
 public typealias completion = () -> Void
 
 public let kAuthorization = "http://anarcho.pp.ciklum.com/api/login"
-public let kApps = "http://anarcho.pp.ciklum.com/api/apps/"
+public let kApps = "http://anarcho.pp.ciklum.com/api/apps"
 
 public class AnarchoAPI{
     public func authorization(email: NSString!, password: NSString!, completionBlock: completion? = nil) -> Self{

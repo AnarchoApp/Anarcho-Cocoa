@@ -24,6 +24,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         self.setUpTextField()
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.passwordTextField.text = ""
+    }
+    
     func setUpTextField() {
         self.loginTextField.text = "msa@ciklum.com"
         self.passwordTextField.text = "123654"
