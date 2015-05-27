@@ -7,11 +7,21 @@ class BuildsViewController: UITableViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         self.tableView.rowHeight = 60
         title = "Applications"
-        
-        AnarchoAPI().getBuilds("", completion: { (builds) -> Void in
+        self.setUpLogOutButton()
+        AnarchoAPI().getBuilds("Mak_Sim", completion: { (builds) -> Void in
             println(builds)
         })
 
+    }
+    
+    func setUpLogOutButton () {
+        let logoutLeftButton = UIBarButtonItem(title: "Log Out", style: UIBarButtonItemStyle.Plain, target: self, action: "pressLogOutButton")
+        self.navigationItem.leftBarButtonItem = logoutLeftButton
+        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Chalkduster", size: 15)!], forState: UIControlState.Normal)
+    }
+    
+    func pressLogOutButton() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

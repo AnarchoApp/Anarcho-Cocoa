@@ -9,7 +9,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate  {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,9 +20,19 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Login"
-        self.loginTextField.text = ""
-        self.passwordTextField.text = ""
+        title = "Welcome"
+        self.setUpTextField()
+    }
+    
+    func setUpTextField() {
+        self.loginTextField.text = "msa@ciklum.com"
+        self.passwordTextField.text = "123654"
+        let colour = UIColor.whiteColor().colorWithAlphaComponent(0.8)
+        
+        var placeholderLogin = NSAttributedString(string: "Email address:", attributes: [NSForegroundColorAttributeName : colour])
+        self.loginTextField.attributedPlaceholder = placeholderLogin
+        var placeholderPassword = NSAttributedString(string: "Password:", attributes: [NSForegroundColorAttributeName : colour])
+        self.passwordTextField.attributedPlaceholder = placeholderPassword
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -48,6 +58,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func pressLoginButton(sender: UIButton) {
+        self.view.endEditing(true)
         if self.validateUserData() {
             let login : (String) = self.loginTextField.text
             let pass : (String) = self.passwordTextField.text
@@ -55,6 +66,7 @@ class LoginViewController: UIViewController {
             AnarchoAPI().authorization(login, password: pass) { () -> Void in
                 AnarchoAPI().getApps { (app) -> Void in
                     self.applications = app
+                    println(app)
                     self.performSegueWithIdentifier("showBuilds", sender: self)
                     self.loginButton.enabled = true
                 }
@@ -62,5 +74,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+        
     
 }
