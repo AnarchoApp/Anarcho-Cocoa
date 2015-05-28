@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     func setUpTextField() {
         self.loginTextField.text = "msa@ciklum.com"
         self.passwordTextField.text = "123654"
-        let colour = UIColor.whiteColor().colorWithAlphaComponent(0.8)
+        let colour = UIColor.blackColor().colorWithAlphaComponent(0.8)
         
         var placeholderLogin = NSAttributedString(string: "Email address:", attributes: [NSForegroundColorAttributeName : colour])
         self.loginTextField.attributedPlaceholder = placeholderLogin
