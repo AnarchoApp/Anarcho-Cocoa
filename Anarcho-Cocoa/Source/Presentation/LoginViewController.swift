@@ -14,6 +14,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var buttonWidth: NSLayoutConstraint!
+
     
     var applications : [Application] = []
     
@@ -63,22 +65,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate  {
         return true
     }
     
-    @IBAction func pressLoginButton(sender: UIButton) {
+    @IBAction func pressLoginButton(sender: AnarchoButton) {
         self.view.endEditing(true)
-        if self.validateUserData() {
-            let login : (String) = self.loginTextField.text
-            let pass : (String) = self.passwordTextField.text
-            
-            AnarchoAPI().authorization(login, password: pass) { () -> Void in
-                AnarchoAPI().getApps { (app) -> Void in
-                    self.applications = app
-                    println(app)
-                    self.performSegueWithIdentifier("showBuilds", sender: self)
-                    self.loginButton.enabled = true
-                }
-                
-            }
+        sender.startLoading(self.buttonWidth)
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
+            Int64(3 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            sender.endLoading(self.buttonWidth)
         }
+        
+//        if self.validateUserData() {
+//            let login : (String) = self.loginTextField.text
+//            let pass : (String) = self.passwordTextField.text
+//            
+//            AnarchoAPI().authorization(login, password: pass) { () -> Void in
+//                AnarchoAPI().getApps { (app) -> Void in
+//                    self.applications = app
+//                    println(app)
+//                    self.performSegueWithIdentifier("showBuilds", sender: self)
+//                    self.loginButton.enabled = true
+//                }
+//                
+//            }
+//        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

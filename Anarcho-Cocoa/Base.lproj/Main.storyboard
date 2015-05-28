@@ -71,7 +71,7 @@
         <!--Login View Controller-->
         <scene sceneID="r0x-BR-OYQ">
             <objects>
-                <viewController id="2mc-pu-MXM" customClass="LoginViewController" customModule="Anarcho_Cocoa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2mc-pu-MXM" customClass="LoginViewController" customModule="Anarcho_Cocoa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dPZ-LD-dYY"/>
                         <viewControllerLayoutGuide type="bottom" id="Oll-l3-h4t"/>
@@ -115,7 +115,7 @@
                                     <constraint firstAttribute="height" constant="91" id="hia-cK-vKm"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5a-FE-AyS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5a-FE-AyS" customClass="AnarchoButton" customModule="Anarcho_Cocoa" customModuleProvider="target">
                                 <rect key="frame" x="175" y="261" width="251" height="44"/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -136,6 +136,9 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="yuP-yT-ocQ">
+                                <rect key="frame" x="453" y="407" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -153,6 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dlf-4i-ef8"/>
                     <connections>
+                        <outlet property="buttonWidth" destination="0z2-lJ-5yo" id="gxV-Bw-Lhk"/>
                         <outlet property="loginButton" destination="y5a-FE-AyS" id="z2b-Vz-S36"/>
                         <outlet property="loginTextField" destination="AIh-e2-bOK" id="cBF-2v-cfB"/>
                         <outlet property="passwordTextField" destination="N0A-YS-pej" id="Ghq-bY-5cu"/>
